@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Componentes de Feedback - ONG Esperança</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ONG Esperança</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+
+    <main class="feedback-demo">
+
+        <h2>Componentes de Feedback</h2>
+
+        <p>
+            Esta página apresenta exemplos dos componentes visuais utilizados
+            para fornecer retorno ao usuário durante a navegação.
+        </p>
+
+
+        <!-- BADGES -->
+
+        <section>
+
+            <h3>Badges</h3>
+
+            <div class="badges">
+
+                <span class="badge badge-ativo">
+                    Projeto ativo
+                </span>
+
+                <span class="badge badge-voluntario">
+                    Voluntariado
+                </span>
+
+                <span class="badge badge-doacao">
+                    Doações
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERTAS -->
+
+        <section>
+
+            <h3>Alertas</h3>
+
+            <div class="alerta alerta-sucesso">
+                Cadastro realizado com sucesso!
+            </div>
+
+            <div class="alerta alerta-erro">
+                Não foi possível enviar o formulário.
+            </div>
+
+            <div class="alerta alerta-aviso">
+                Verifique os campos antes de continuar.
+            </div>
+
+        </section>
+
+
+        <!-- TOAST -->
+
+        <section>
+
+            <h3>Toast</h3>
+
+            <p>
+                Clique no botão abaixo para visualizar uma notificação.
+            </p>
+
+            <button class="botao" onclick="mostrarToast()">
+                Mostrar notificação
+            </button>
+
+            <div id="toast" class="toast">
+                Sua solicitação foi enviada com sucesso!
+            </div>
+
+        </section>
+
+
+        <!-- MODAL -->
+
+        <section>
+
+            <h3>Modal</h3>
+
+            <p>
+                Clique no botão abaixo para visualizar uma janela modal.
+            </p>
+
+            <button class="botao" onclick="abrirModal()">
+                Abrir modal
+            </button>
+
+
+            <div id="modal" class="modal">
+
+                <div class="modal-conteudo">
+
+                    <button
+                        class="fechar"
+                        onclick="fecharModal()">
+                        ×
+                    </button>
+
+                    <h2>Obrigado pelo seu interesse!</h2>
+
+                    <p>
+                        Sua participação ajuda a fortalecer
+                        os projetos da ONG.
+                    </p>
+
+                    <button
+                        class="botao"
+                        onclick="fecharModal()">
+                        Entendi
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 ONG Esperança
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function mostrarToast() {
+
+            const toast =
+                document.getElementById("toast");
+
+            toast.classList.add("mostrar");
+
+            setTimeout(() => {
+
+                toast.classList.remove("mostrar");
+
+            }, 3000);
+
+        }
+
+
+        function abrirModal() {
+
+            document
+                .getElementById("modal")
+                .classList.add("ativo");
+
+        }
+
+
+        function fecharModal() {
+
+            document
+                .getElementById("modal")
+                .classList.remove("ativo");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

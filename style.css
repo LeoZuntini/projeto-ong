@@ -1,0 +1,619 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #176b45;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #0f5033;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* SEÇÕES */
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #176b45;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: #245d46;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+
+/* IMAGEM DA PÁGINA INICIAL */
+
+section img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* LISTAS DOS PROJETOS */
+
+ul {
+    margin: 15px 0 20px 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* LINKS DAS SEÇÕES */
+
+article a {
+    display: inline-block;
+    background-color: #176b45;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background-color: #0f5033;
+}
+
+
+/* FORMULÁRIO */
+
+form {
+    margin-top: 25px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+legend {
+    color: #176b45;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* CAMPOS DO FORMULÁRIO */
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #176b45;
+}
+
+
+/* RADIO E CHECKBOX */
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
+
+
+/* BOTÕES */
+
+button {
+    background-color: #176b45;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0f5033;
+}
+
+button[type="reset"] {
+    background-color: #666;
+}
+
+button[type="reset"]:hover {
+    background-color: #444;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #176b45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+
+/* 1 - CELULARES PEQUENOS - até 480px */
+
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* 2 - CELULARES - 481px até 767px */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* 3 - TABLETS - 768px até 1023px */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+}
+
+
+/* 4 - NOTEBOOKS E DESKTOPS - 1024px até 1439px */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    main {
+        width: 85%;
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+
+    section {
+        padding: 25px;
+    }
+}
+
+
+/* 5 - TELAS GRANDES - 1440px ou mais */
+
+@media (min-width: 1440px) {
+
+    main {
+        width: 80%;
+        max-width: 1400px;
+        margin: 40px auto;
+    }
+
+    section {
+        padding: 30px;
+    }
+}
+
+/* ========================================
+   PÁGINA DE FEEDBACK
+======================================== */
+
+.feedback-demo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.feedback-demo section {
+    margin-bottom: 40px;
+}
+
+.feedback-demo h2 {
+    margin-bottom: 20px;
+}
+
+.feedback-demo h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   BADGES
+======================================== */
+
+.badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.badge-ativo {
+    background-color: #176b45;
+    color: #ffffff;
+}
+
+.badge-voluntario {
+    background-color: #3f8f68;
+    color: #ffffff;
+}
+
+.badge-doacao {
+    background-color: #245d46;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   ALERTAS
+======================================== */
+
+.alerta {
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+
+.alerta-sucesso {
+    background-color: #e8f5ee;
+    border-color: #176b45;
+    color: #0f5033;
+}
+
+.alerta-erro {
+    background-color: #fff1f0;
+    border-color: #c0392b;
+    color: #922b21;
+}
+
+.alerta-aviso {
+    background-color: #fff8e1;
+    border-color: #d89b00;
+    color: #705000;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.botao {
+    background-color: #176b45;
+    color: #ffffff;
+    border: 2px solid #176b45;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #0f5033;
+    border-color: #0f5033;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.botao:focus {
+    outline: 3px solid #3f8f68;
+    outline-offset: 3px;
+}
+
+.botao:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================
+   TOAST
+======================================== */
+
+.toast {
+    visibility: hidden;
+
+    min-width: 280px;
+
+    background-color: #176b45;
+    color: #ffffff;
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    padding: 16px 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 0.3s ease;
+
+    z-index: 1100;
+}
+
+.toast.mostrar {
+    visibility: visible;
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    position: relative;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-conteudo h2 {
+    color: #176b45;
+
+    margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+    margin-bottom: 20px;
+}
+
+.fechar {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    background-color: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #333333;
+}
+
+.fechar:hover {
+    color: #c0392b;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE DO FEEDBACK
+======================================== */
+
+@media (max-width: 767px) {
+
+    .feedback-demo {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toast {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+        min-width: auto;
+    }
+
+    .modal-conteudo {
+        width: 90%;
+        padding: 20px;
+    }
+}
